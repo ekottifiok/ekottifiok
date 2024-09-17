@@ -125,7 +125,7 @@ function AlternateTimeline({ isSimplified }: { isSimplified: boolean }): ReactNo
         ) : (
           <Grid container spacing={2}>
             {
-              timelineData.map((item) => (
+              timeline.map((item) => (
                 <Grid item key={item.header}>
                   <Stack gap={1} p={2} sx={{
                     backgroundColor: 'white',
