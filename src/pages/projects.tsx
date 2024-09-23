@@ -1,16 +1,16 @@
-import {Box, Button, Link, Stack, Typography} from '@mui/material';
-import {useEffect, useState, type ReactNode} from "react";
-import {ProgrammingStack, ProjectsData} from "@components/populate";
-import type {PageParameters, ProgrammingStackEnum} from "@components/interface";
-import {PageDesign} from '@components/utils';
+import { Box, Button, Link, Stack, Typography } from '@mui/material';
+import { useEffect, useState, type ReactNode } from "react";
+import { programmingStack, projectsData } from "@components/populate";
+import type { PageParameters, ProgrammingStackEnum } from "@components/interface";
+import { PageDesign } from '@components/utils';
 import useMeasure from 'react-use-measure'
-import {animate, motion, useMotionValue} from 'framer-motion';
+import { animate, motion, useMotionValue } from 'framer-motion';
 
 function HandleIndividualProject(
-  {language, upSm}: { language: ProgrammingStackEnum[], upSm: boolean | undefined }
+  { language, upSm }: { language: ProgrammingStackEnum[], upSm: boolean | undefined }
 ): ReactNode {
   const xTranslation = useMotionValue(0)
-  const [ref, {width}] = useMeasure()
+  const [ref, { width }] = useMeasure()
   const [pauseOnHover, setPauseOnHover] = useState(false)
   const [rerender, setRerender] = useState(false)
   const [mustFinish, setMustFinish] = useState(false)
@@ -44,7 +44,7 @@ function HandleIndividualProject(
   return (
 
 
-    <Box sx={{overflow: 'hidden', width: '40vw', zIndex: '3'}}>
+    <Box sx={{ overflow: 'hidden', width: '40vw', zIndex: '3' }}>
       <motion.div
         onHoverEnd={() => {
           setMustFinish(true)
@@ -55,7 +55,7 @@ function HandleIndividualProject(
           setPauseOnHover(true)
         }}
         ref={ref}
-        style={{x: xTranslation}}
+        style={{ x: xTranslation }}
       >
         <Stack direction='row' gap={100} sx={{
           // width: '100%',
@@ -70,13 +70,13 @@ function HandleIndividualProject(
           zIndex: 0,
         }}>
           {language.map((item) => {
-            const stackDetails = ProgrammingStack[item]
+            const stackDetails = programmingStack[item]
             return (
               <Link href={stackDetails.link} key={item}>
                 <img
                   alt={`${item} logo`}
                   src={stackDetails.image}
-                  style={{height: 'auto', width: "150px"}}
+                  style={{ height: 'auto', width: "150px" }}
                 />
               </Link>
             )
@@ -88,13 +88,13 @@ function HandleIndividualProject(
 
 }
 
-export function Projects({upMd, upSm}: PageParameters): ReactNode {
+export function Projects({ upMd, upSm }: PageParameters): ReactNode {
 
   return <PageDesign header='Projects'>
-    <Stack gap={3} sx={{width: '100%'}}>
-      {ProjectsData.map(({
-                           title, logo, devices, subHeader, language
-                         }) => {
+    <Stack gap={3} sx={{ width: '100%' }}>
+      {projectsData.map(({
+        title, logo, devices, subHeader, language
+      }) => {
         return (
           <Stack direction='row' key={title} p={2} sx={{
             alignItems: 'center', backgroundColor: 'white',
@@ -103,17 +103,17 @@ export function Projects({upMd, upSm}: PageParameters): ReactNode {
             overflow: 'hidden',
           }}>
 
-            <Stack gap={1} sx={{justifyContent: 'center', zIndex: 1}} width={upMd ? "25vw" : "auto"}>
+            <Stack gap={1} sx={{ justifyContent: 'center', zIndex: 1 }} width={upMd ? "25vw" : "auto"}>
               <Typography
-                noWrap sx={{width: 'inherit', height: 'inherit'}}
+                noWrap sx={{ width: 'inherit', height: 'inherit' }}
                 textOverflow='ellipsis'
                 variant='h3'
               >{title}</Typography>
               <Typography variant='body2'>{subHeader}</Typography>
-              <Stack direction='row' gap={1} sx={{display: upMd ? undefined : 'none'}}>
-                {devices.map(({device, id}) => (
-                  <Box key={id} px={1} sx={{backgroundColor: '#01579b', borderRadius: '4px'}}>
-                    <Typography sx={{color: 'white', fontSize: '12px'}}>
+              <Stack direction='row' gap={1} sx={{ display: upMd ? undefined : 'none' }}>
+                {devices.map(({ device, id }) => (
+                  <Box key={id} px={1} sx={{ backgroundColor: '#01579b', borderRadius: '4px' }}>
+                    <Typography sx={{ color: 'white', fontSize: '12px' }}>
                       {device}
                     </Typography>
                   </Box>
@@ -121,14 +121,14 @@ export function Projects({upMd, upSm}: PageParameters): ReactNode {
               </Stack>
             </Stack>
 
-            <HandleIndividualProject language={language} upSm={upSm}/>
+            <HandleIndividualProject language={language} upSm={upSm} />
 
             <Stack direction="column" sx={{
               alignItems: 'center',
               justifyContent: 'center', zIndex: 1
             }}>
-              <img alt={title} height="auto" src={logo} width={upMd ? "100px" : "50px"}/>
-              <Box sx={{flexDirection: 'row-reverse'}}>
+              <img alt={title} height="auto" src={logo} width={upMd ? "100px" : "50px"} />
+              <Box sx={{ flexDirection: 'row-reverse' }}>
                 <Button color="success" variant="contained">
                   <Typography>Open</Typography>
                 </Button>

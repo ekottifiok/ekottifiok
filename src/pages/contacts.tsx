@@ -1,13 +1,13 @@
 import { Button, Link, Stack, Typography } from '@mui/material'
 import type { ReactNode } from "react";
-import { ContactData } from "@components/populate";
+import { contactData } from "@components/populate";
 import { MdSend } from "react-icons/md";
 import { PageDesign } from '@components/utils';
 
 export function Contacts(): ReactNode {
   return <PageDesign header='Contacts'>
     <Stack gap={3}>
-      {ContactData.map((item) => (
+      {contactData.map((item) => (
         <Stack direction='row' gap={3} key={item.key} sx={{ alignItems: 'center', color: 'white', fontSize: 40}}>
           {item.icon}
           <Link href={item.link} rel="noopener noreferrer" target="_blank" underline='none'>

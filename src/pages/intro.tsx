@@ -3,7 +3,7 @@
 import {Box, Button, Link, Stack, Typography} from "@mui/material";
 import type {ReactNode} from "react";
 import {motion} from "framer-motion"
-import {IntroButtons, whatIDo} from "@components/populate";
+import {introButtons, whatIDo} from "@components/populate";
 import {InfinityText} from '@components/utils';
 import type {PageParameters} from "@components/interface";
 
@@ -57,7 +57,7 @@ export function Intro({upMd}: PageParameters): ReactNode {
         <Stack direction={upMd ? 'row' : 'column'} gap={4} mt={5} pt={5}
                sx={{alignItems: 'center', justifyContent: 'center'}}>
           {
-            IntroButtons.map((item) => (
+            introButtons.map((item) => (
               <Link href={item.link} key={item.key}>
                 <Button
                   size='large'
