@@ -75,7 +75,7 @@ function AlternateTimeline({ isSimplified }: { isSimplified: boolean }): ReactNo
                       sx={{ m: 'auto 0' }}
                       variant="body1"
                     >
-                      {item.timeline}
+                      {item.period} {item.isPresent ? "- present": null}
                     </TimelineOppositeContent>
                     <TimelineSeparator>
                       <TimelineConnector />
@@ -138,7 +138,7 @@ function AlternateTimeline({ isSimplified }: { isSimplified: boolean }): ReactNo
                         {item.header}
                       </Typography>
                       <Typography variant="caption">
-                        {item.timeline}
+                      {item.period} {item.isPresent ? "- present": null}
                       </Typography>
                     </Stack>
 

@@ -37,8 +37,9 @@ export interface TimelineInterface {
   location: string;
   previewLink?: string;
   subheader: string;
-  timeline: string;
+  period: string;
   simplified: boolean;
+  isPresent: boolean;
 }
 
 export interface PageDesignParameters {

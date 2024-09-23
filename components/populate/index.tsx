@@ -117,7 +117,7 @@ export const portfolioTechnologiesData: PortfolioTechnologiesInterface[] = [
 
 export const timelineData: TimelineInterface[] = [
   {
-    timeline: '2015',
+    period: '2015',
     isSchool: true,
     header: 'Python and Django Full Stack Web Developer Bootcamp',
     subheader: "I got a boot camp and learnt a lot about programming, building responsive websites," +
@@ -125,9 +125,10 @@ export const timelineData: TimelineInterface[] = [
     institute: 'Udemy',
     location: 'Online',
     simplified: false,
+    isPresent: false
   },
   {
-    timeline: '2017',
+    period: '2017',
     isSchool: true,
     header: 'IT Essentials',
     subheader: "I learnt a lot of important computer skills, " +
@@ -137,9 +138,10 @@ export const timelineData: TimelineInterface[] = [
     location: 'Online',
     previewLink: 'certificates/cisco_it_essentials.jpg',
     simplified: false,
+    isPresent: false
   },
   {
-    timeline: '2014-2016',
+    period: '2014-2016',
     isSchool: true,
     header: 'Senior Secondary School',
     subheader: "I implemented what I learnt building a functional and responsive websites," +
@@ -147,9 +149,10 @@ export const timelineData: TimelineInterface[] = [
     institute: 'Niger Delta Science School',
     location: 'Port Harcourt, Nigeria',
     simplified: false,
+    isPresent: false
   },
   {
-    timeline: '2022',
+    period: '2022',
     isSchool: true,
     header: 'BlockChain',
     subheader: 'I understand smart contracts, a core idea and computational model of blockchain that enables automation, autonomy, scalability and transparency.' +
@@ -158,9 +161,10 @@ export const timelineData: TimelineInterface[] = [
     location: 'Online',
     previewLink: 'certificates/coursera_block_chain.jpg',
     simplified: false,
+    isPresent: false
   },
   {
-    timeline: '2022',
+    period: '2022',
     isSchool: true,
     header: 'Developing Applications with Google Cloud',
     subheader: 'I learnt how to identify the purpose and value of Google Cloud products and services.' +
@@ -169,9 +173,10 @@ export const timelineData: TimelineInterface[] = [
     location: 'Online',
     previewLink: 'certificates/coursera_gcp.jpg',
     simplified: false,
+    isPresent: false
   },
   {
-    timeline: '2023',
+    period: '2023',
     isSchool: true,
     header: 'Software Engineering',
     subheader: "We had to perform task every day for a year with breaks only on holidays and 2 weeks break in between." +
@@ -180,9 +185,10 @@ export const timelineData: TimelineInterface[] = [
     location: 'Online',
     previewLink: 'certificates/alx_se.jpg',
     simplified: true,
+    isPresent: false
   },
   {
-    timeline: '2017-2024',
+    period: '2017',
     isSchool: true,
     header: 'Bachelor of Electrical/Electronics Engineering',
     subheader: "I majored in Electronics and Computer Engineering, " +
@@ -192,9 +198,10 @@ export const timelineData: TimelineInterface[] = [
     institute: 'University of Port Harcourt',
     location: 'Port Harcourt, Nigeria',
     simplified: true,
+    isPresent: false
   },
   {
-    timeline: '2023-present',
+    period: '2023',
     isSchool: false,
     header: 'Software Engineer',
     subheader: "We are building an all in one hospital management system which entails," +
@@ -202,9 +209,10 @@ export const timelineData: TimelineInterface[] = [
     institute: 'Kloud Health',
     location: 'Remote',
     simplified: true,
+    isPresent: true
   },
   {
-    timeline: '2024',
+    period: '2024',
     isSchool: true,
     header: 'Google Cybersecurity',
     subheader: 'I understand the importance of cybersecurity practices and their impact for organizations. ' +
@@ -213,9 +221,10 @@ export const timelineData: TimelineInterface[] = [
     location: 'Online',
     previewLink: 'certificates/coursera_cyber_security.jpg',
     simplified: true,
+    isPresent: false
   },
   {
-    timeline: '2024',
+    period: '2024',
     isSchool: true,
     header: 'Google IT Support',
     subheader: 'I learnt to perform day-to-day IT support tasks including computer assembly, ' +
@@ -224,5 +233,17 @@ export const timelineData: TimelineInterface[] = [
     location: 'Online',
     previewLink: 'certificates/coursera_it_support.jpg',
     simplified: false,
+    isPresent: false
   },
+  {
+    period: '2024',
+    isSchool: false,
+    header: 'Cisco IT Instructor',
+    subheader: ' Instructed Ignatius Ajuru University of Education undergraduate student on fundamental Cisco Netacad courses' +
+    'Enrolled and assisted the students use the Cisco Netacad platform',
+    institute: "Dreamlife Communications",
+    location: "Port Harcourt",
+    simplified: false,
+    isPresent: true
+  }
 ]
