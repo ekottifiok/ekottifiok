@@ -129,7 +129,7 @@ export const timelineData: TimelineInterface[] = [
       'Enrolled and assisted the students use the Cisco Netacad platform',
     institute: "Dreamlife Communications",
     location: "Port Harcourt",
-    simplified: false,
+    simplified: true,
     isPresent: true
   }
 ];
