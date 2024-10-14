@@ -12,4 +12,16 @@ export const programmingStack: Record<ProgrammingStackEnum, { image: string; lin
   [ProgrammingStackEnum.React]: { image: 'languages_logo/react.png', link: 'https://react.dev/' },
   [ProgrammingStackEnum.MySQL]: { image: 'languages_logo/react.png', link: 'https://react.dev/' },
   [ProgrammingStackEnum.SQLite]: { image: 'languages_logo/react.png', link: 'https://react.dev/' },
+  [ProgrammingStackEnum.Django]: {
+    image: "languages_logo/django-logo-negative.webp",
+    link: "https://www.djangoproject.com"
+  },
+  [ProgrammingStackEnum.Python]: {
+    image: "languages_logo/python.jpeg",
+    link: "https://www.python.org"
+  },
+  [ProgrammingStackEnum.Nextjs]: {
+image: "",
+link: ""
+  }
 };

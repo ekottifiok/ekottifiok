@@ -12,6 +12,7 @@ import {ImDatabase} from "react-icons/im";
 import type {
   PortfolioTechnologiesInterface} from "@components/interface";
 import {ProgrammingStackEnum, ProjectsDevices} from "@components/interface";
+import { IoIosGlobe } from "react-icons/io";
 
 export const whatIDo = [
   'Application Developer',
@@ -38,9 +39,10 @@ export const allDevices = [
 ]
 
 export const portfolioTechnologiesData: PortfolioTechnologiesInterface[] = [
-  {icon: <MdPhoneAndroid size="2em"/>, title: 'Mobile Application', languages: [ProgrammingStackEnum.Flutter,]},
+  {icon: <MdPhoneAndroid size="2em"/>, title: 'Mobile Application', languages: [ProgrammingStackEnum.Flutter,],},
   {icon: <MdLaptop size="2em"/>, title: 'Frontend', languages: [ProgrammingStackEnum.React,]},
-  {icon: <MdStorage size="2em"/>, title: 'Backend', languages: [ProgrammingStackEnum.React,]},
-  {icon: <ImDatabase size="2em"/>, title: 'Database', languages: [ProgrammingStackEnum.React,]},
-  {icon: <GiSpanner size="2em"/>, title: 'Miscellanous', languages: [ProgrammingStackEnum.React,]},
+  {icon: <MdStorage size="2em"/>, title: 'Backend', languages: [ProgrammingStackEnum.Express,]},
+  {icon: <ImDatabase size="2em"/>, title: 'Database', languages: [ProgrammingStackEnum.MySQL, ProgrammingStackEnum.SQLite]},
+  {icon: <GiSpanner size="2em"/>, title: 'Miscellanous', languages: [ProgrammingStackEnum.Git,]},
+  {icon: <IoIosGlobe size="2em"/>, title: 'Full-stack Webapp', languages: [ProgrammingStackEnum.Django, ProgrammingStackEnum.Nextjs]},
 ];

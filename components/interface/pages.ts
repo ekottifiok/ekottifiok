@@ -11,17 +11,22 @@ export enum ProjectsDevices {
   Ios = 'iOS',
   Linux = 'Linux',
   MacOS = 'MacOS',
+  Web = 'Web',
   Windows = 'Windows',
 }
 
 export enum ProgrammingStackEnum {
-  Dart = 'Dart',
   CSharp = 'C#',
+  Dart = 'Dart',
+  Django = 'Django',
   Flutter = 'Flutter',
   Git = 'Git',
+  MySQL = 'MySQL/MariaDB',
+  Python = 'Python',
   React = 'React',
   SQLite = 'SQLite',
-  MySQL = 'MySQL/MariaDB'
+  Nextjs = "Nextjs",
+  Express = "Express",
 }
 
 export interface PortfolioTechnologiesInterface {

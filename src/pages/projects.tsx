@@ -93,9 +93,8 @@ export function Projects({ upMd, upSm }: PageParameters): ReactNode {
   return <PageDesign header='Projects'>
     <Stack gap={3} sx={{ width: '100%' }}>
       {projectsData.map(({
-        title, logo, devices, subHeader, language
-      }) => {
-        return (
+        title, logo, devices, subHeader, language, link
+      }) =>  (
           <Stack direction='row' key={title} p={2} sx={{
             alignItems: 'center', backgroundColor: 'white',
             borderRadius: '4px', color: 'black', height: '157px',
@@ -129,14 +128,14 @@ export function Projects({ upMd, upSm }: PageParameters): ReactNode {
             }}>
               <img alt={title} height="auto" src={logo} width={upMd ? "100px" : "50px"} />
               <Box sx={{ flexDirection: 'row-reverse' }}>
-                <Button color="success" variant="contained">
+                <Button LinkComponent={Link} color="success" disabled={link === undefined} href={link} variant="contained">
                   <Typography>Open</Typography>
                 </Button>
               </Box>
             </Stack>
           </Stack>
         )
-      })}
+      )}
     </Stack>
   </PageDesign>;
 

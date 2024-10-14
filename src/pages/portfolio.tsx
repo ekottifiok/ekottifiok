@@ -24,7 +24,7 @@ export function Portfolio(): ReactNode {
         <Grid container spacing={3}>
           {
             portfolioTechnologiesData.map((item) => (
-              <Grid key={item.title} lg={4} sm={6} xs={12} m={1}>
+              <Grid key={item.title} lg={4} m={1} sm={6} xs={12}>
                 <Box p={2} sx={{
                   alignItems: 'flex-start',
                   backgroundColor: "white",
@@ -38,9 +38,15 @@ export function Portfolio(): ReactNode {
                     {item.icon}
                     <Stack direction='column'>
                       <Typography variant="h6">{item.title}</Typography>
-                      {item.languages.map((language) => (
-                        <Typography key={language} variant="body1">{language}</Typography>
+                      <Stack direction='row' gap={0.5}>
+                      {item.languages.map((language, index) => (
+                        <Typography key={language} sx={{
+                          '&::after': {
+              content: index < item.languages.length - 1 ? '","' : 'none',
+            },
+                        }} variant="body1">{language}</Typography>
                       ))}
+                      </Stack>
                     </Stack>
                   </Stack>
                 </Box>
