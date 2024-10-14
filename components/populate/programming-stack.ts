@@ -21,7 +21,11 @@ export const programmingStack: Record<ProgrammingStackEnum, { image: string; lin
     link: "https://www.python.org"
   },
   [ProgrammingStackEnum.Nextjs]: {
-image: "",
-link: ""
+    image: "languages_logo/nextjs.png",
+    link: "https://nextjs.org"
+  },
+  [ProgrammingStackEnum.Express]: {
+    image: "languages_logo/expressjs.png",
+    link: "https://expressjs.com/"
   }
 };
